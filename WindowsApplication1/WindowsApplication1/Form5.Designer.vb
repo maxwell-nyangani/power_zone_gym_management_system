@@ -23,33 +23,33 @@ Partial Class AddSubscriptionForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AddSubscriptionForm))
-        Me.Label8 = New System.Windows.Forms.Label()
+        Me.addSubscriptionErrorLable = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.cancelSubscriptionBtn = New System.Windows.Forms.Button()
+        Me.saveSubscriptionBtn = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.membersCBx = New System.Windows.Forms.ComboBox()
+        Me.packagesCBx = New System.Windows.Forms.ComboBox()
+        Me.startDateDtTmPckr = New System.Windows.Forms.DateTimePicker()
+        Me.endDateDtTmPckr = New System.Windows.Forms.DateTimePicker()
+        Me.isActiveChkBx = New System.Windows.Forms.CheckBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Label8
+        'addSubscriptionErrorLable
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.Red
-        Me.Label8.Location = New System.Drawing.Point(252, 447)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(44, 20)
-        Me.Label8.TabIndex = 35
-        Me.Label8.Text = "Error"
+        Me.addSubscriptionErrorLable.AutoSize = True
+        Me.addSubscriptionErrorLable.Font = New System.Drawing.Font("Segoe UI", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.addSubscriptionErrorLable.ForeColor = System.Drawing.Color.Red
+        Me.addSubscriptionErrorLable.Location = New System.Drawing.Point(252, 447)
+        Me.addSubscriptionErrorLable.Name = "addSubscriptionErrorLable"
+        Me.addSubscriptionErrorLable.Size = New System.Drawing.Size(44, 20)
+        Me.addSubscriptionErrorLable.TabIndex = 35
+        Me.addSubscriptionErrorLable.Text = "Error"
         '
         'PictureBox1
         '
@@ -62,29 +62,29 @@ Partial Class AddSubscriptionForm
         Me.PictureBox1.TabIndex = 34
         Me.PictureBox1.TabStop = False
         '
-        'Button2
+        'cancelSubscriptionBtn
         '
-        Me.Button2.BackColor = System.Drawing.Color.Orange
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(440, 489)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(111, 36)
-        Me.Button2.TabIndex = 33
-        Me.Button2.Text = "Cancel"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.cancelSubscriptionBtn.BackColor = System.Drawing.Color.Orange
+        Me.cancelSubscriptionBtn.ForeColor = System.Drawing.Color.White
+        Me.cancelSubscriptionBtn.Location = New System.Drawing.Point(440, 489)
+        Me.cancelSubscriptionBtn.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.cancelSubscriptionBtn.Name = "cancelSubscriptionBtn"
+        Me.cancelSubscriptionBtn.Size = New System.Drawing.Size(111, 36)
+        Me.cancelSubscriptionBtn.TabIndex = 33
+        Me.cancelSubscriptionBtn.Text = "Cancel"
+        Me.cancelSubscriptionBtn.UseVisualStyleBackColor = False
         '
-        'Button1
+        'saveSubscriptionBtn
         '
-        Me.Button1.BackColor = System.Drawing.Color.Orange
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(557, 489)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(94, 36)
-        Me.Button1.TabIndex = 32
-        Me.Button1.Text = "Save"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.saveSubscriptionBtn.BackColor = System.Drawing.Color.Orange
+        Me.saveSubscriptionBtn.ForeColor = System.Drawing.Color.White
+        Me.saveSubscriptionBtn.Location = New System.Drawing.Point(557, 489)
+        Me.saveSubscriptionBtn.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.saveSubscriptionBtn.Name = "saveSubscriptionBtn"
+        Me.saveSubscriptionBtn.Size = New System.Drawing.Size(94, 36)
+        Me.saveSubscriptionBtn.TabIndex = 32
+        Me.saveSubscriptionBtn.Text = "Save"
+        Me.saveSubscriptionBtn.UseVisualStyleBackColor = False
         '
         'Label5
         '
@@ -131,45 +131,45 @@ Partial Class AddSubscriptionForm
         Me.Label1.TabIndex = 19
         Me.Label1.Text = "Member"
         '
-        'ComboBox1
+        'membersCBx
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(256, 214)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(362, 28)
-        Me.ComboBox1.TabIndex = 36
+        Me.membersCBx.FormattingEnabled = True
+        Me.membersCBx.Location = New System.Drawing.Point(256, 214)
+        Me.membersCBx.Name = "membersCBx"
+        Me.membersCBx.Size = New System.Drawing.Size(362, 28)
+        Me.membersCBx.TabIndex = 36
         '
-        'ComboBox2
+        'packagesCBx
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(256, 258)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(362, 28)
-        Me.ComboBox2.TabIndex = 37
+        Me.packagesCBx.FormattingEnabled = True
+        Me.packagesCBx.Location = New System.Drawing.Point(256, 258)
+        Me.packagesCBx.Name = "packagesCBx"
+        Me.packagesCBx.Size = New System.Drawing.Size(362, 28)
+        Me.packagesCBx.TabIndex = 37
         '
-        'DateTimePicker1
+        'startDateDtTmPckr
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(256, 299)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(362, 27)
-        Me.DateTimePicker1.TabIndex = 38
+        Me.startDateDtTmPckr.Location = New System.Drawing.Point(256, 299)
+        Me.startDateDtTmPckr.Name = "startDateDtTmPckr"
+        Me.startDateDtTmPckr.Size = New System.Drawing.Size(362, 27)
+        Me.startDateDtTmPckr.TabIndex = 38
         '
-        'DateTimePicker2
+        'endDateDtTmPckr
         '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(256, 343)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(362, 27)
-        Me.DateTimePicker2.TabIndex = 39
+        Me.endDateDtTmPckr.Location = New System.Drawing.Point(256, 343)
+        Me.endDateDtTmPckr.Name = "endDateDtTmPckr"
+        Me.endDateDtTmPckr.Size = New System.Drawing.Size(362, 27)
+        Me.endDateDtTmPckr.TabIndex = 39
         '
-        'CheckBox1
+        'isActiveChkBx
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(256, 394)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(125, 24)
-        Me.CheckBox1.TabIndex = 40
-        Me.CheckBox1.Text = "Check if (Yes)"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.isActiveChkBx.AutoSize = True
+        Me.isActiveChkBx.Location = New System.Drawing.Point(256, 394)
+        Me.isActiveChkBx.Name = "isActiveChkBx"
+        Me.isActiveChkBx.Size = New System.Drawing.Size(125, 24)
+        Me.isActiveChkBx.TabIndex = 40
+        Me.isActiveChkBx.Text = "Check if (Yes)"
+        Me.isActiveChkBx.UseVisualStyleBackColor = True
         '
         'AddSubscriptionForm
         '
@@ -177,15 +177,15 @@ Partial Class AddSubscriptionForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(721, 541)
-        Me.Controls.Add(Me.CheckBox1)
-        Me.Controls.Add(Me.DateTimePicker2)
-        Me.Controls.Add(Me.DateTimePicker1)
-        Me.Controls.Add(Me.ComboBox2)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.isActiveChkBx)
+        Me.Controls.Add(Me.endDateDtTmPckr)
+        Me.Controls.Add(Me.startDateDtTmPckr)
+        Me.Controls.Add(Me.packagesCBx)
+        Me.Controls.Add(Me.membersCBx)
+        Me.Controls.Add(Me.addSubscriptionErrorLable)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.cancelSubscriptionBtn)
+        Me.Controls.Add(Me.saveSubscriptionBtn)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -200,18 +200,18 @@ Partial Class AddSubscriptionForm
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents addSubscriptionErrorLable As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents cancelSubscriptionBtn As System.Windows.Forms.Button
+    Friend WithEvents saveSubscriptionBtn As System.Windows.Forms.Button
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
-    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
-    Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
-    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents membersCBx As System.Windows.Forms.ComboBox
+    Friend WithEvents packagesCBx As System.Windows.Forms.ComboBox
+    Friend WithEvents startDateDtTmPckr As System.Windows.Forms.DateTimePicker
+    Friend WithEvents endDateDtTmPckr As System.Windows.Forms.DateTimePicker
+    Friend WithEvents isActiveChkBx As System.Windows.Forms.CheckBox
 End Class

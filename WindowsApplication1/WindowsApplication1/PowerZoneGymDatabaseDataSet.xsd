@@ -347,7 +347,7 @@
   <xs:element name="PowerZoneGymDatabaseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="PowerZoneGymDatabaseDataSet" msprop:Generator_UserDSName="PowerZoneGymDatabaseDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="member" msprop:Generator_TableClassName="memberDataTable" msprop:Generator_TableVarName="tablemember" msprop:Generator_TablePropName="member" msprop:Generator_RowDeletingName="memberRowDeleting" msprop:Generator_RowChangingName="memberRowChanging" msprop:Generator_RowEvHandlerName="memberRowChangeEventHandler" msprop:Generator_RowDeletedName="memberRowDeleted" msprop:Generator_UserTableName="member" msprop:Generator_RowChangedName="memberRowChanged" msprop:Generator_RowEvArgName="memberRowChangeEvent" msprop:Generator_RowClassName="memberRow">
+        <xs:element name="member" msprop:Generator_TableClassName="memberDataTable" msprop:Generator_TableVarName="tablemember" msprop:Generator_RowChangedName="memberRowChanged" msprop:Generator_TablePropName="member" msprop:Generator_RowDeletingName="memberRowDeleting" msprop:Generator_RowChangingName="memberRowChanging" msprop:Generator_RowEvHandlerName="memberRowChangeEventHandler" msprop:Generator_RowDeletedName="memberRowDeleted" msprop:Generator_RowClassName="memberRow" msprop:Generator_UserTableName="member" msprop:Generator_RowEvArgName="memberRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -401,10 +401,11 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="email" msprop:Generator_ColumnVarNameInTable="columnemail" msprop:Generator_ColumnPropNameInRow="email" msprop:Generator_ColumnPropNameInTable="emailColumn" msprop:Generator_UserColumnName="email" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="package" msprop:Generator_TableClassName="packageDataTable" msprop:Generator_TableVarName="tablepackage" msprop:Generator_TablePropName="package" msprop:Generator_RowDeletingName="packageRowDeleting" msprop:Generator_RowChangingName="packageRowChanging" msprop:Generator_RowEvHandlerName="packageRowChangeEventHandler" msprop:Generator_RowDeletedName="packageRowDeleted" msprop:Generator_UserTableName="package" msprop:Generator_RowChangedName="packageRowChanged" msprop:Generator_RowEvArgName="packageRowChangeEvent" msprop:Generator_RowClassName="packageRow">
+        <xs:element name="package" msprop:Generator_TableClassName="packageDataTable" msprop:Generator_TableVarName="tablepackage" msprop:Generator_RowChangedName="packageRowChanged" msprop:Generator_TablePropName="package" msprop:Generator_RowDeletingName="packageRowDeleting" msprop:Generator_RowChangingName="packageRowChanging" msprop:Generator_RowEvHandlerName="packageRowChangeEventHandler" msprop:Generator_RowDeletedName="packageRowDeleted" msprop:Generator_RowClassName="packageRow" msprop:Generator_UserTableName="package" msprop:Generator_RowEvArgName="packageRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -442,7 +443,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="subscription" msprop:Generator_TableClassName="subscriptionDataTable" msprop:Generator_TableVarName="tablesubscription" msprop:Generator_TablePropName="subscription" msprop:Generator_RowDeletingName="subscriptionRowDeleting" msprop:Generator_RowChangingName="subscriptionRowChanging" msprop:Generator_RowEvHandlerName="subscriptionRowChangeEventHandler" msprop:Generator_RowDeletedName="subscriptionRowDeleted" msprop:Generator_UserTableName="subscription" msprop:Generator_RowChangedName="subscriptionRowChanged" msprop:Generator_RowEvArgName="subscriptionRowChangeEvent" msprop:Generator_RowClassName="subscriptionRow">
+        <xs:element name="subscription" msprop:Generator_TableClassName="subscriptionDataTable" msprop:Generator_TableVarName="tablesubscription" msprop:Generator_RowChangedName="subscriptionRowChanged" msprop:Generator_TablePropName="subscription" msprop:Generator_RowDeletingName="subscriptionRowDeleting" msprop:Generator_RowChangingName="subscriptionRowChanging" msprop:Generator_RowEvHandlerName="subscriptionRowChangeEventHandler" msprop:Generator_RowDeletedName="subscriptionRowDeleted" msprop:Generator_RowClassName="subscriptionRow" msprop:Generator_UserTableName="subscription" msprop:Generator_RowEvArgName="subscriptionRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -456,7 +457,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="user" msprop:Generator_TableClassName="userDataTable" msprop:Generator_TableVarName="tableuser" msprop:Generator_TablePropName="user" msprop:Generator_RowDeletingName="userRowDeleting" msprop:Generator_RowChangingName="userRowChanging" msprop:Generator_RowEvHandlerName="userRowChangeEventHandler" msprop:Generator_RowDeletedName="userRowDeleted" msprop:Generator_UserTableName="user" msprop:Generator_RowChangedName="userRowChanged" msprop:Generator_RowEvArgName="userRowChangeEvent" msprop:Generator_RowClassName="userRow">
+        <xs:element name="user" msprop:Generator_TableClassName="userDataTable" msprop:Generator_TableVarName="tableuser" msprop:Generator_RowChangedName="userRowChanged" msprop:Generator_TablePropName="user" msprop:Generator_RowDeletingName="userRowDeleting" msprop:Generator_RowChangingName="userRowChanging" msprop:Generator_RowEvHandlerName="userRowChangeEventHandler" msprop:Generator_RowDeletedName="userRowDeleted" msprop:Generator_RowClassName="userRow" msprop:Generator_UserTableName="user" msprop:Generator_RowEvArgName="userRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -508,9 +509,9 @@
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="memberTable1" msdata:parent="member" msdata:child="subscription" msdata:parentkey="ID" msdata:childkey="member_id" msprop:Generator_UserChildTable="subscription" msprop:Generator_ChildPropName="GetsubscriptionRows" msprop:Generator_UserRelationName="memberTable1" msprop:Generator_ParentPropName="memberRow" msprop:Generator_RelationVarName="relationmemberTable1" msprop:Generator_UserParentTable="member" />
-      <msdata:Relationship name="packagesubscription" msdata:parent="package" msdata:child="subscription" msdata:parentkey="ID" msdata:childkey="package_id" msprop:Generator_UserChildTable="subscription" msprop:Generator_ChildPropName="GetsubscriptionRows" msprop:Generator_UserRelationName="packagesubscription" msprop:Generator_ParentPropName="packageRow" msprop:Generator_RelationVarName="relationpackagesubscription" msprop:Generator_UserParentTable="package" />
-      <msdata:Relationship name="usersubscription" msdata:parent="user" msdata:child="subscription" msdata:parentkey="ID" msdata:childkey="created_by" msprop:Generator_UserChildTable="subscription" msprop:Generator_ChildPropName="GetsubscriptionRows" msprop:Generator_UserRelationName="usersubscription" msprop:Generator_RelationVarName="relationusersubscription" msprop:Generator_UserParentTable="user" msprop:Generator_ParentPropName="userRow" />
+      <msdata:Relationship name="memberTable1" msdata:parent="member" msdata:child="subscription" msdata:parentkey="ID" msdata:childkey="member_id" msprop:Generator_UserChildTable="subscription" msprop:Generator_ChildPropName="GetsubscriptionRows" msprop:Generator_UserRelationName="memberTable1" msprop:Generator_RelationVarName="relationmemberTable1" msprop:Generator_UserParentTable="member" msprop:Generator_ParentPropName="memberRow" />
+      <msdata:Relationship name="packagesubscription" msdata:parent="package" msdata:child="subscription" msdata:parentkey="ID" msdata:childkey="package_id" msprop:Generator_UserChildTable="subscription" msprop:Generator_ChildPropName="GetsubscriptionRows" msprop:Generator_UserRelationName="packagesubscription" msprop:Generator_RelationVarName="relationpackagesubscription" msprop:Generator_UserParentTable="package" msprop:Generator_ParentPropName="packageRow" />
+      <msdata:Relationship name="usersubscription" msdata:parent="user" msdata:child="subscription" msdata:parentkey="ID" msdata:childkey="created_by" msprop:Generator_UserChildTable="subscription" msprop:Generator_ChildPropName="GetsubscriptionRows" msprop:Generator_UserRelationName="usersubscription" msprop:Generator_ParentPropName="userRow" msprop:Generator_RelationVarName="relationusersubscription" msprop:Generator_UserParentTable="user" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

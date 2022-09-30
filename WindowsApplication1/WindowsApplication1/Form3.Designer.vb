@@ -164,6 +164,8 @@ Partial Class AddNewMemberForm
         '
         'dobDTPckr
         '
+        Me.dobDTPckr.CustomFormat = "MM/dd/yyyy"
+        Me.dobDTPckr.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dobDTPckr.Location = New System.Drawing.Point(151, 306)
         Me.dobDTPckr.Name = "dobDTPckr"
         Me.dobDTPckr.Size = New System.Drawing.Size(331, 30)

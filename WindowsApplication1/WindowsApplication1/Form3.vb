@@ -13,23 +13,24 @@ Public Class AddNewMemberForm
         If Me.isCreateMode Then
 
             'collect user entered data into DB
-            Dim saveQueryString As String = "INSERT INTO member(title,firstname,lastname,sex,street_address,city,phone_number) VALUES (@title,@firstname,@lastname,@sex,@street_address,@city,@phone_number)"
+            Dim saveQueryString As String = "INSERT INTO member(title,firstname,lastname,sex,street_address,city,phone_number,email,date_of_birth) VALUES (@title,@firstname,@lastname,@sex,@street_address,@city,@phone_number,@email,@date_of_birth)"
             Dim insertCommand As New OleDbCommand(saveQueryString, dbConnection)
             insertCommand.Parameters.AddWithValue("@title", Me.titleCBx.Text)
             insertCommand.Parameters.AddWithValue("@firstname", Me.firstNamestxtBx.Text)
             insertCommand.Parameters.AddWithValue("@lastname", Me.lastNameTxtBx.Text)
             insertCommand.Parameters.AddWithValue("@sex", Me.sexCBx.Text)
-            'insertCommand.Parameters.AddWithValue("@date_of_birth", Me.dobDTPckr.Text)
             insertCommand.Parameters.AddWithValue("@street_address", Me.addressRTxtBx.Text)
             insertCommand.Parameters.AddWithValue("@city", Me.cityTxtBx.Text)
             insertCommand.Parameters.AddWithValue("@phone_number", Me.phoneTxtBx.Text)
+            insertCommand.Parameters.AddWithValue("@email", Me.emailTxtBx.Text)
+            insertCommand.Parameters.AddWithValue("@date_of_birth", OleDbType.Date).Value = dobDTPckr.Value.ToString
 
             dbConnection.Open()
             insertCommand.ExecuteNonQuery()
             dbConnection.Close()
         Else
             'update the old record in DB
-            Dim updateQueryString As String = "UPDATE  member SET title='" & Me.titleCBx.Text & "', firstname='" & Me.firstNamestxtBx.Text & "', lastname='" & Me.lastNameTxtBx.Text & "', sex='" & Me.sexCBx.Text & "', street_address='" & Me.addressRTxtBx.Text & "', city='" & Me.cityTxtBx.Text & "', phone_number='" & Me.phoneTxtBx.Text & "' WHERE ID=" & Me.idOfRecordToEdit & ""
+            Dim updateQueryString As String = "UPDATE  member SET title='" & Me.titleCBx.Text & "', firstname='" & Me.firstNamestxtBx.Text & "', lastname='" & Me.lastNameTxtBx.Text & "', email='" & Me.emailTxtBx.Text & "', sex='" & Me.sexCBx.Text & "', street_address='" & Me.addressRTxtBx.Text & "', city='" & Me.cityTxtBx.Text & "', phone_number='" & Me.phoneTxtBx.Text & "', date_of_birth='" & Me.dobDTPckr.Value.ToString("d") & "' WHERE ID=" & Me.idOfRecordToEdit & ""
             'MessageBox.Show(updateQueryString)
             Dim updateCommand As New OleDbCommand(updateQueryString, dbConnection)
             dbConnection.Open()
@@ -56,7 +57,7 @@ Public Class AddNewMemberForm
             Me.firstNamestxtBx.Text = memberReader("firstname")
             Me.lastNameTxtBx.Text = memberReader("lastname")
             Me.sexCBx.Text = memberReader("sex")
-            'Me.dobDTPckr.Text = memberReader("date_of_birth")
+            Me.dobDTPckr.Value = memberReader("date_of_birth")
             Me.addressRTxtBx.Text = memberReader("street_address")
             Me.cityTxtBx.Text = memberReader("city")
             Me.phoneTxtBx.Text = memberReader("phone_number")

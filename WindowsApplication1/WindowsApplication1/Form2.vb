@@ -154,7 +154,7 @@ Public Class MainPageForm
     End Sub
 
     Private Sub searchMembersBtn_Click(sender As Object, e As EventArgs) Handles searchMembersBtn.Click
-        Dim searchMembersCommand As New OleDbCommand("SELECT * FROM member WHERE firstname LIKE '%' +@searchTerm+ '%'", connection)
+        Dim searchMembersCommand As New OleDbCommand("SELECT * FROM member WHERE firstname LIKE '%' +@searchTerm+ '%' OR lastname LIKE '%' +@searchTerm+ '%' OR phone_number LIKE '%' +@searchTerm+ '%'", connection)
         searchMembersCommand.Parameters.AddWithValue("@searchTerm", membersSearchTxtBx.Text)
         membersDataAdaptor.SelectCommand = searchMembersCommand
         membersDataTable.Clear()
