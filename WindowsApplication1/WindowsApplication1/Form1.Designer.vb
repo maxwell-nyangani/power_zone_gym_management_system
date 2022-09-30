@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class loginForm
+Partial Class LoginForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,8 @@ Partial Class loginForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(loginForm))
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginForm))
         Me.loginLogoPictBx = New System.Windows.Forms.PictureBox()
         Me.loginWelcomeLabel = New System.Windows.Forms.Label()
         Me.loginUsernameTxtBx = New System.Windows.Forms.TextBox()
@@ -32,7 +33,12 @@ Partial Class loginForm
         Me.loginUsernameLabel = New System.Windows.Forms.Label()
         Me.loginPasswordLabel = New System.Windows.Forms.Label()
         Me.loginErrorLable = New System.Windows.Forms.Label()
+        Me.PowerZoneGymDatabaseDataSet = New WindowsApplication1.PowerZoneGymDatabaseDataSet()
+        Me.MemberBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MemberTableAdapter = New WindowsApplication1.PowerZoneGymDatabaseDataSetTableAdapters.memberTableAdapter()
         CType(Me.loginLogoPictBx, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PowerZoneGymDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MemberBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'loginLogoPictBx
@@ -71,9 +77,10 @@ Partial Class loginForm
         'exitLoginBtn
         '
         Me.exitLoginBtn.BackColor = System.Drawing.Color.Orange
-        Me.exitLoginBtn.Location = New System.Drawing.Point(206, 438)
+        Me.exitLoginBtn.ForeColor = System.Drawing.Color.White
+        Me.exitLoginBtn.Location = New System.Drawing.Point(206, 449)
         Me.exitLoginBtn.Name = "exitLoginBtn"
-        Me.exitLoginBtn.Size = New System.Drawing.Size(122, 51)
+        Me.exitLoginBtn.Size = New System.Drawing.Size(122, 39)
         Me.exitLoginBtn.TabIndex = 4
         Me.exitLoginBtn.Text = "Exit"
         Me.exitLoginBtn.UseVisualStyleBackColor = False
@@ -81,9 +88,10 @@ Partial Class loginForm
         'loginBtn
         '
         Me.loginBtn.BackColor = System.Drawing.Color.Orange
-        Me.loginBtn.Location = New System.Drawing.Point(334, 438)
+        Me.loginBtn.ForeColor = System.Drawing.Color.White
+        Me.loginBtn.Location = New System.Drawing.Point(334, 449)
         Me.loginBtn.Name = "loginBtn"
-        Me.loginBtn.Size = New System.Drawing.Size(129, 50)
+        Me.loginBtn.Size = New System.Drawing.Size(129, 39)
         Me.loginBtn.TabIndex = 5
         Me.loginBtn.Text = "Login"
         Me.loginBtn.UseVisualStyleBackColor = False
@@ -111,18 +119,32 @@ Partial Class loginForm
         Me.loginErrorLable.AutoSize = True
         Me.loginErrorLable.Font = New System.Drawing.Font("Segoe UI", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.loginErrorLable.ForeColor = System.Drawing.Color.Red
-        Me.loginErrorLable.Location = New System.Drawing.Point(164, 537)
+        Me.loginErrorLable.Location = New System.Drawing.Point(164, 507)
         Me.loginErrorLable.Name = "loginErrorLable"
         Me.loginErrorLable.Size = New System.Drawing.Size(44, 20)
         Me.loginErrorLable.TabIndex = 8
         Me.loginErrorLable.Text = "error"
         '
-        'loginForm
+        'PowerZoneGymDatabaseDataSet
+        '
+        Me.PowerZoneGymDatabaseDataSet.DataSetName = "PowerZoneGymDatabaseDataSet"
+        Me.PowerZoneGymDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'MemberBindingSource
+        '
+        Me.MemberBindingSource.DataMember = "member"
+        Me.MemberBindingSource.DataSource = Me.PowerZoneGymDatabaseDataSet
+        '
+        'MemberTableAdapter
+        '
+        Me.MemberTableAdapter.ClearBeforeFill = True
+        '
+        'LoginForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(675, 631)
+        Me.ClientSize = New System.Drawing.Size(675, 576)
         Me.Controls.Add(Me.loginErrorLable)
         Me.Controls.Add(Me.loginPasswordLabel)
         Me.Controls.Add(Me.loginUsernameLabel)
@@ -134,9 +156,11 @@ Partial Class loginForm
         Me.Controls.Add(Me.loginLogoPictBx)
         Me.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.Black
-        Me.Name = "loginForm"
+        Me.Name = "LoginForm"
         Me.Text = "Login"
         CType(Me.loginLogoPictBx, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PowerZoneGymDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MemberBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -150,5 +174,8 @@ Partial Class loginForm
     Friend WithEvents loginUsernameLabel As System.Windows.Forms.Label
     Friend WithEvents loginPasswordLabel As System.Windows.Forms.Label
     Friend WithEvents loginErrorLable As System.Windows.Forms.Label
+    Friend WithEvents PowerZoneGymDatabaseDataSet As WindowsApplication1.PowerZoneGymDatabaseDataSet
+    Friend WithEvents MemberBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents MemberTableAdapter As WindowsApplication1.PowerZoneGymDatabaseDataSetTableAdapters.memberTableAdapter
 
 End Class
