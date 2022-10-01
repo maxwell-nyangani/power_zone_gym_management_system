@@ -23,19 +23,19 @@ Public Class AddNewMemberForm
             insertCommand.Parameters.AddWithValue("@city", Me.cityTxtBx.Text)
             insertCommand.Parameters.AddWithValue("@phone_number", Me.phoneTxtBx.Text)
             insertCommand.Parameters.AddWithValue("@email", Me.emailTxtBx.Text)
-            insertCommand.Parameters.AddWithValue("@date_of_birth", OleDbType.Date).Value = dobDTPckr.Value.ToString
+            insertCommand.Parameters.AddWithValue("@date_of_birth", OleDbType.Date).Value = Me.dobDTPckr.Value.ToString
 
-            dbConnection.Open()
+            Me.dbConnection.Open()
             insertCommand.ExecuteNonQuery()
-            dbConnection.Close()
+            Me.dbConnection.Close()
         Else
             'update the old record in DB
             Dim updateQueryString As String = "UPDATE  member SET title='" & Me.titleCBx.Text & "', firstname='" & Me.firstNamestxtBx.Text & "', lastname='" & Me.lastNameTxtBx.Text & "', email='" & Me.emailTxtBx.Text & "', sex='" & Me.sexCBx.Text & "', street_address='" & Me.addressRTxtBx.Text & "', city='" & Me.cityTxtBx.Text & "', phone_number='" & Me.phoneTxtBx.Text & "', date_of_birth='" & Me.dobDTPckr.Value.ToString("d") & "' WHERE ID=" & Me.idOfRecordToEdit & ""
             'MessageBox.Show(updateQueryString)
             Dim updateCommand As New OleDbCommand(updateQueryString, dbConnection)
-            dbConnection.Open()
+            Me.dbConnection.Open()
             updateCommand.ExecuteNonQuery()
-            dbConnection.Close()
+            Me.dbConnection.Close()
 
         End If
         Me.Close()
@@ -46,7 +46,7 @@ Public Class AddNewMemberForm
         Me.CenterToParent()
         'connect to the DB and fetch the data of the memeber if we are in edit mode or just show blank for if we are in create mode
         If Not Me.isCreateMode Then
-            'connect to database to load memebr details
+            'connect to database to load member details
             Me.dbConnection.Open()
             Dim selectCommand As New OleDbCommand("SELECT * FROM member WHERE id =" & Me.idOfRecordToEdit & "", Me.dbConnection)
             Dim memberReader As OleDbDataReader

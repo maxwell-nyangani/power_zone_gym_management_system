@@ -149,6 +149,8 @@ Partial Class AddSubscriptionForm
         '
         'startDateDtTmPckr
         '
+        Me.startDateDtTmPckr.CustomFormat = "MM/dd/yyyy"
+        Me.startDateDtTmPckr.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.startDateDtTmPckr.Location = New System.Drawing.Point(256, 299)
         Me.startDateDtTmPckr.Name = "startDateDtTmPckr"
         Me.startDateDtTmPckr.Size = New System.Drawing.Size(362, 27)
@@ -156,6 +158,8 @@ Partial Class AddSubscriptionForm
         '
         'endDateDtTmPckr
         '
+        Me.endDateDtTmPckr.CustomFormat = "MM/dd/yyyy"
+        Me.endDateDtTmPckr.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.endDateDtTmPckr.Location = New System.Drawing.Point(256, 343)
         Me.endDateDtTmPckr.Name = "endDateDtTmPckr"
         Me.endDateDtTmPckr.Size = New System.Drawing.Size(362, 27)
