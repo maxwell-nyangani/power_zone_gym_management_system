@@ -173,6 +173,7 @@ Partial Class UserDetailsForm
         Me.Controls.Add(Me.TextBox1)
         Me.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.MaximizeBox = False
         Me.Name = "UserDetailsForm"
         Me.Text = "User Details"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

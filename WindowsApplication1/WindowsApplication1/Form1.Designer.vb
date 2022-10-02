@@ -143,6 +143,7 @@ Partial Class LoginForm
         Me.Controls.Add(Me.loginLogoPictBx)
         Me.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.Black
+        Me.MaximizeBox = False
         Me.Name = "LoginForm"
         Me.Text = "Login"
         CType(Me.loginLogoPictBx, System.ComponentModel.ISupportInitialize).EndInit()

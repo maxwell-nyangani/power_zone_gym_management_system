@@ -81,8 +81,11 @@ Partial Class MainPageForm
         Me.settingTabPage = New System.Windows.Forms.TabPage()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.saveAdminUserChangesBtn = New System.Windows.Forms.Button()
+        Me.Admin_userBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PowerZoneGymDatabaseDataSet = New WindowsApplication1.PowerZoneGymDatabaseDataSet()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.MemberBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MemberTableAdapter = New WindowsApplication1.PowerZoneGymDatabaseDataSetTableAdapters.memberTableAdapter()
         Me.TableAdapterManager = New WindowsApplication1.PowerZoneGymDatabaseDataSetTableAdapters.TableAdapterManager()
@@ -90,18 +93,8 @@ Partial Class MainPageForm
         Me.SubscriptionTableAdapter = New WindowsApplication1.PowerZoneGymDatabaseDataSetTableAdapters.subscriptionTableAdapter()
         Me.SubscriptionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PackageBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Admin_userBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Admin_userTableAdapter = New WindowsApplication1.PowerZoneGymDatabaseDataSetTableAdapters.admin_userTableAdapter()
         Me.adminUserDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.saveAdminUserChangesBtn = New System.Windows.Forms.Button()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.homeTabPage.SuspendLayout()
@@ -121,13 +114,13 @@ Partial Class MainPageForm
         CType(Me.packageBySubscriptionCountChart, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.membershipByGenderChart, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.settingTabPage.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.Admin_userBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PowerZoneGymDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MemberBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SubscriptionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PackageBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Admin_userBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.adminUserDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -667,16 +660,43 @@ Partial Class MainPageForm
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "About"
         '
-        'ContextMenuStrip1
+        'GroupBox1
         '
-        Me.ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
+        Me.GroupBox1.Controls.Add(Me.adminUserDataGridView)
+        Me.GroupBox1.Controls.Add(Me.saveAdminUserChangesBtn)
+        Me.GroupBox1.Location = New System.Drawing.Point(16, 167)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(771, 303)
+        Me.GroupBox1.TabIndex = 6
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Manage Admin Users"
+        '
+        'saveAdminUserChangesBtn
+        '
+        Me.saveAdminUserChangesBtn.BackColor = System.Drawing.Color.Orange
+        Me.saveAdminUserChangesBtn.ForeColor = System.Drawing.Color.White
+        Me.saveAdminUserChangesBtn.Location = New System.Drawing.Point(535, 268)
+        Me.saveAdminUserChangesBtn.Name = "saveAdminUserChangesBtn"
+        Me.saveAdminUserChangesBtn.Size = New System.Drawing.Size(230, 29)
+        Me.saveAdminUserChangesBtn.TabIndex = 4
+        Me.saveAdminUserChangesBtn.Text = "Save Admin Users Changes"
+        Me.saveAdminUserChangesBtn.UseVisualStyleBackColor = False
+        '
+        'Admin_userBindingSource
+        '
+        Me.Admin_userBindingSource.DataMember = "admin_user"
+        Me.Admin_userBindingSource.DataSource = Me.PowerZoneGymDatabaseDataSet
         '
         'PowerZoneGymDatabaseDataSet
         '
         Me.PowerZoneGymDatabaseDataSet.DataSetName = "PowerZoneGymDatabaseDataSet"
         Me.PowerZoneGymDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
         '
         'MemberBindingSource
         '
@@ -714,90 +734,18 @@ Partial Class MainPageForm
         Me.PackageBindingSource.DataMember = "package"
         Me.PackageBindingSource.DataSource = Me.PowerZoneGymDatabaseDataSet
         '
-        'Admin_userBindingSource
-        '
-        Me.Admin_userBindingSource.DataMember = "admin_user"
-        Me.Admin_userBindingSource.DataSource = Me.PowerZoneGymDatabaseDataSet
-        '
         'Admin_userTableAdapter
         '
         Me.Admin_userTableAdapter.ClearBeforeFill = True
         '
         'adminUserDataGridView
         '
-        Me.adminUserDataGridView.AutoGenerateColumns = False
         Me.adminUserDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.adminUserDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewCheckBoxColumn1, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
-        Me.adminUserDataGridView.DataSource = Me.Admin_userBindingSource
         Me.adminUserDataGridView.Location = New System.Drawing.Point(6, 26)
         Me.adminUserDataGridView.Name = "adminUserDataGridView"
         Me.adminUserDataGridView.RowTemplate.Height = 24
         Me.adminUserDataGridView.Size = New System.Drawing.Size(759, 236)
-        Me.adminUserDataGridView.TabIndex = 3
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "ID"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "ID"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "email"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "email"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "username"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "username"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "created_on"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "created_on"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        '
-        'DataGridViewCheckBoxColumn1
-        '
-        Me.DataGridViewCheckBoxColumn1.DataPropertyName = "is_active"
-        Me.DataGridViewCheckBoxColumn1.HeaderText = "is_active"
-        Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "last_login"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "last_login"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "password"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "password"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        '
-        'saveAdminUserChangesBtn
-        '
-        Me.saveAdminUserChangesBtn.BackColor = System.Drawing.Color.Orange
-        Me.saveAdminUserChangesBtn.ForeColor = System.Drawing.Color.White
-        Me.saveAdminUserChangesBtn.Location = New System.Drawing.Point(535, 268)
-        Me.saveAdminUserChangesBtn.Name = "saveAdminUserChangesBtn"
-        Me.saveAdminUserChangesBtn.Size = New System.Drawing.Size(230, 29)
-        Me.saveAdminUserChangesBtn.TabIndex = 4
-        Me.saveAdminUserChangesBtn.Text = "Save Admin Users Changes"
-        Me.saveAdminUserChangesBtn.UseVisualStyleBackColor = False
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.saveAdminUserChangesBtn)
-        Me.GroupBox1.Controls.Add(Me.adminUserDataGridView)
-        Me.GroupBox1.Location = New System.Drawing.Point(16, 167)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(771, 303)
-        Me.GroupBox1.TabIndex = 6
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Manage Admin Users"
+        Me.adminUserDataGridView.TabIndex = 5
         '
         'MainPageForm
         '
@@ -809,6 +757,7 @@ Partial Class MainPageForm
         Me.Controls.Add(Me.PictureBox1)
         Me.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.MaximizeBox = False
         Me.Name = "MainPageForm"
         Me.Text = "Power Zone Gym"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -835,13 +784,13 @@ Partial Class MainPageForm
         CType(Me.packageBySubscriptionCountChart, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.membershipByGenderChart, System.ComponentModel.ISupportInitialize).EndInit()
         Me.settingTabPage.ResumeLayout(False)
+        Me.GroupBox1.ResumeLayout(False)
+        CType(Me.Admin_userBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PowerZoneGymDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MemberBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SubscriptionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PackageBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Admin_userBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.adminUserDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -901,14 +850,7 @@ Partial Class MainPageForm
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Admin_userBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Admin_userTableAdapter As WindowsApplication1.PowerZoneGymDatabaseDataSetTableAdapters.admin_userTableAdapter
-    Friend WithEvents adminUserDataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewCheckBoxColumn1 As System.Windows.Forms.DataGridViewCheckBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents saveAdminUserChangesBtn As System.Windows.Forms.Button
+    Friend WithEvents adminUserDataGridView As System.Windows.Forms.DataGridView
 End Class

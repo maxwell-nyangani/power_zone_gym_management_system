@@ -110,15 +110,6 @@ Public Class MainPageForm
 
 
     Private Sub deleteSelectedMemberBtn_Click(sender As Object, e As EventArgs) Handles deleteSelectedMemberBtn.Click
-        'Try
-        '    Dim scb = New OleDbCommandBuilder(membersDataAdaptor)
-        '    membersDataAdaptor.Update(membersDataTable)
-        '    MessageBox.Show("OK!")
-        'Catch ex As Exception
-        '    MessageBox.Show(ex.Message)
-        'End Try
-
-
 
         If Me.selectedMemberId = Nothing Or Me.selectedMemberId = -1 Then
             'Warn user to select a row in the grid
@@ -403,4 +394,40 @@ Public Class MainPageForm
     End Sub
 
 
+    Private Sub saveAdminUserChangesBtn_Click(sender As Object, e As EventArgs) Handles saveAdminUserChangesBtn.Click
+        'save all the data changed in the admin users gridview
+        Try
+            connection.Open()
+            'usersDataAdaptor.Update(usersDSet.Tables("admin_user"))
+            usersDataAdaptor.Update(usersDSet, "admin_user")
+            connection.Close()
+            MessageBox.Show("Changes to the Amdin users saved successfully!")
+        Catch ex As Exception
+            connection.Close()
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Dim usersDataAdaptor As New OleDbDataAdapter
+    Dim usersDataTable As New DataTable
+    Dim usersCommand As New OleDbCommand("SELECT * FROM admin_user", connection)
+    Dim usersDSet = New DataSet
+    Dim usersCommandBuilder = New OleDbCommandBuilder(usersDataAdaptor)
+        
+
+    Private Sub settingTabPage_Enter(sender As Object, e As EventArgs) Handles settingTabPage.Enter
+        connection.Open()
+        usersDataAdaptor.SelectCommand = usersCommand
+
+        usersDataAdaptor.UpdateCommand = usersCommandBuilder.GetUpdateCommand()
+        usersDataAdaptor.DeleteCommand = usersCommandBuilder.GetDeleteCommand()
+        usersDataAdaptor.InsertCommand = usersCommandBuilder.GetInsertCommand()
+        usersDataTable.Clear()
+        usersDSet.Clear()
+        usersDataAdaptor.Fill(usersDSet, "admin_user")
+
+        adminUserDataGridView.DataSource = usersDSet.Tables("admin_user")
+        connection.Close()
+
+    End Sub
 End Class

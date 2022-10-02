@@ -273,6 +273,7 @@ Partial Class AddNewMemberForm
         Me.Controls.Add(Me.PictureBox1)
         Me.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.MaximizeBox = False
         Me.Name = "AddNewMemberForm"
         Me.Text = "Add New Member"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
