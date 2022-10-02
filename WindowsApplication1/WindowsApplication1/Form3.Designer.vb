@@ -51,9 +51,9 @@ Partial Class AddNewMemberForm
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(662, 11)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(201, 132)
+        Me.PictureBox1.Size = New System.Drawing.Size(667, 132)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -61,7 +61,7 @@ Partial Class AddNewMemberForm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(100, 61)
+        Me.Label1.Location = New System.Drawing.Point(99, 168)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(46, 23)
         Me.Label1.TabIndex = 1
@@ -70,7 +70,7 @@ Partial Class AddNewMemberForm
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(45, 120)
+        Me.Label2.Location = New System.Drawing.Point(44, 204)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(101, 23)
         Me.Label2.TabIndex = 2
@@ -79,7 +79,7 @@ Partial Class AddNewMemberForm
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(55, 179)
+        Me.Label3.Location = New System.Drawing.Point(54, 240)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(91, 23)
         Me.Label3.TabIndex = 3
@@ -88,7 +88,7 @@ Partial Class AddNewMemberForm
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(108, 238)
+        Me.Label4.Location = New System.Drawing.Point(107, 277)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(38, 23)
         Me.Label4.TabIndex = 4
@@ -97,7 +97,7 @@ Partial Class AddNewMemberForm
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(62, 297)
+        Me.Label5.Location = New System.Drawing.Point(61, 313)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(84, 23)
         Me.Label5.TabIndex = 5
@@ -106,7 +106,7 @@ Partial Class AddNewMemberForm
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(92, 356)
+        Me.Label6.Location = New System.Drawing.Point(91, 349)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(54, 23)
         Me.Label6.TabIndex = 6
@@ -115,7 +115,7 @@ Partial Class AddNewMemberForm
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(82, 415)
+        Me.Label7.Location = New System.Drawing.Point(81, 385)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(64, 23)
         Me.Label7.TabIndex = 7
@@ -124,7 +124,7 @@ Partial Class AddNewMemberForm
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(72, 474)
+        Me.Label8.Location = New System.Drawing.Point(71, 417)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(74, 23)
         Me.Label8.TabIndex = 8
@@ -132,46 +132,50 @@ Partial Class AddNewMemberForm
         '
         'titleCBx
         '
+        Me.titleCBx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.titleCBx.FormattingEnabled = True
         Me.titleCBx.Items.AddRange(New Object() {"Dr", "Prof", "Hon", "Mr", "Mrs", "Miss", "Ms", "Your Excellency", "Sir", "Dame", "Duke", "Duchess"})
-        Me.titleCBx.Location = New System.Drawing.Point(152, 58)
+        Me.titleCBx.Location = New System.Drawing.Point(151, 160)
         Me.titleCBx.Name = "titleCBx"
         Me.titleCBx.Size = New System.Drawing.Size(222, 31)
         Me.titleCBx.TabIndex = 9
         '
         'firstNamestxtBx
         '
-        Me.firstNamestxtBx.Location = New System.Drawing.Point(152, 117)
+        Me.firstNamestxtBx.Location = New System.Drawing.Point(151, 197)
         Me.firstNamestxtBx.Name = "firstNamestxtBx"
         Me.firstNamestxtBx.Size = New System.Drawing.Size(483, 30)
         Me.firstNamestxtBx.TabIndex = 10
         '
         'lastNameTxtBx
         '
-        Me.lastNameTxtBx.Location = New System.Drawing.Point(152, 175)
+        Me.lastNameTxtBx.Location = New System.Drawing.Point(151, 233)
         Me.lastNameTxtBx.Name = "lastNameTxtBx"
         Me.lastNameTxtBx.Size = New System.Drawing.Size(483, 30)
         Me.lastNameTxtBx.TabIndex = 11
         '
         'sexCBx
         '
+        Me.sexCBx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.sexCBx.FormattingEnabled = True
         Me.sexCBx.Items.AddRange(New Object() {"Male", "Female", "Prefer not to say"})
-        Me.sexCBx.Location = New System.Drawing.Point(152, 233)
+        Me.sexCBx.Location = New System.Drawing.Point(151, 269)
         Me.sexCBx.Name = "sexCBx"
         Me.sexCBx.Size = New System.Drawing.Size(222, 31)
         Me.sexCBx.TabIndex = 12
         '
         'dobDTPckr
         '
-        Me.dobDTPckr.Location = New System.Drawing.Point(152, 292)
+        Me.dobDTPckr.CustomFormat = "MM/dd/yyyy"
+        Me.dobDTPckr.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dobDTPckr.Location = New System.Drawing.Point(151, 306)
         Me.dobDTPckr.Name = "dobDTPckr"
         Me.dobDTPckr.Size = New System.Drawing.Size(331, 30)
         Me.dobDTPckr.TabIndex = 13
         '
         'addressRTxtBx
         '
-        Me.addressRTxtBx.Location = New System.Drawing.Point(152, 466)
+        Me.addressRTxtBx.Location = New System.Drawing.Point(151, 414)
         Me.addressRTxtBx.Name = "addressRTxtBx"
         Me.addressRTxtBx.Size = New System.Drawing.Size(483, 55)
         Me.addressRTxtBx.TabIndex = 14
@@ -179,14 +183,14 @@ Partial Class AddNewMemberForm
         '
         'emailTxtBx
         '
-        Me.emailTxtBx.Location = New System.Drawing.Point(152, 350)
+        Me.emailTxtBx.Location = New System.Drawing.Point(151, 342)
         Me.emailTxtBx.Name = "emailTxtBx"
         Me.emailTxtBx.Size = New System.Drawing.Size(483, 30)
         Me.emailTxtBx.TabIndex = 15
         '
         'phoneTxtBx
         '
-        Me.phoneTxtBx.Location = New System.Drawing.Point(152, 408)
+        Me.phoneTxtBx.Location = New System.Drawing.Point(151, 378)
         Me.phoneTxtBx.Name = "phoneTxtBx"
         Me.phoneTxtBx.Size = New System.Drawing.Size(483, 30)
         Me.phoneTxtBx.TabIndex = 16
@@ -194,9 +198,10 @@ Partial Class AddNewMemberForm
         'memberSaveBtn
         '
         Me.memberSaveBtn.BackColor = System.Drawing.Color.Orange
-        Me.memberSaveBtn.Location = New System.Drawing.Point(728, 614)
+        Me.memberSaveBtn.ForeColor = System.Drawing.Color.White
+        Me.memberSaveBtn.Location = New System.Drawing.Point(531, 590)
         Me.memberSaveBtn.Name = "memberSaveBtn"
-        Me.memberSaveBtn.Size = New System.Drawing.Size(135, 46)
+        Me.memberSaveBtn.Size = New System.Drawing.Size(135, 36)
         Me.memberSaveBtn.TabIndex = 17
         Me.memberSaveBtn.Text = "Save"
         Me.memberSaveBtn.UseVisualStyleBackColor = False
@@ -204,9 +209,10 @@ Partial Class AddNewMemberForm
         'memberCancelBtn
         '
         Me.memberCancelBtn.BackColor = System.Drawing.Color.Orange
-        Me.memberCancelBtn.Location = New System.Drawing.Point(568, 614)
+        Me.memberCancelBtn.ForeColor = System.Drawing.Color.White
+        Me.memberCancelBtn.Location = New System.Drawing.Point(380, 590)
         Me.memberCancelBtn.Name = "memberCancelBtn"
-        Me.memberCancelBtn.Size = New System.Drawing.Size(145, 46)
+        Me.memberCancelBtn.Size = New System.Drawing.Size(145, 36)
         Me.memberCancelBtn.TabIndex = 18
         Me.memberCancelBtn.Text = "Cancel"
         Me.memberCancelBtn.UseVisualStyleBackColor = False
@@ -215,15 +221,15 @@ Partial Class AddNewMemberForm
         '
         Me.memberErrorTxtBx.Font = New System.Drawing.Font("Segoe UI", 10.2!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.memberErrorTxtBx.ForeColor = System.Drawing.Color.Red
-        Me.memberErrorTxtBx.Location = New System.Drawing.Point(148, 577)
+        Me.memberErrorTxtBx.Location = New System.Drawing.Point(147, 517)
         Me.memberErrorTxtBx.Name = "memberErrorTxtBx"
-        Me.memberErrorTxtBx.Size = New System.Drawing.Size(487, 30)
+        Me.memberErrorTxtBx.Size = New System.Drawing.Size(487, 58)
         Me.memberErrorTxtBx.TabIndex = 19
         Me.memberErrorTxtBx.Text = "Error: "
         '
         'cityTxtBx
         '
-        Me.cityTxtBx.Location = New System.Drawing.Point(149, 529)
+        Me.cityTxtBx.Location = New System.Drawing.Point(151, 475)
         Me.cityTxtBx.Name = "cityTxtBx"
         Me.cityTxtBx.Size = New System.Drawing.Size(483, 30)
         Me.cityTxtBx.TabIndex = 20
@@ -231,7 +237,7 @@ Partial Class AddNewMemberForm
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(104, 530)
+        Me.Label10.Location = New System.Drawing.Point(103, 482)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(42, 23)
         Me.Label10.TabIndex = 21
@@ -242,7 +248,7 @@ Partial Class AddNewMemberForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 23.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(890, 672)
+        Me.ClientSize = New System.Drawing.Size(691, 637)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.cityTxtBx)
         Me.Controls.Add(Me.memberErrorTxtBx)
