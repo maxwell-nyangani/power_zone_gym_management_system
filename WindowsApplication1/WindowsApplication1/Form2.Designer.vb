@@ -24,18 +24,18 @@ Partial Class MainPageForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainPageForm))
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea5 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend5 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series5 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea6 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend6 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series6 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea7 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend7 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series7 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea8 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend8 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series8 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.homeTabPage = New System.Windows.Forms.TabPage()
@@ -90,6 +90,18 @@ Partial Class MainPageForm
         Me.SubscriptionTableAdapter = New WindowsApplication1.PowerZoneGymDatabaseDataSetTableAdapters.subscriptionTableAdapter()
         Me.SubscriptionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PackageBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Admin_userBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Admin_userTableAdapter = New WindowsApplication1.PowerZoneGymDatabaseDataSetTableAdapters.admin_userTableAdapter()
+        Me.adminUserDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.saveAdminUserChangesBtn = New System.Windows.Forms.Button()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.homeTabPage.SuspendLayout()
@@ -113,6 +125,9 @@ Partial Class MainPageForm
         CType(Me.MemberBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SubscriptionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PackageBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Admin_userBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.adminUserDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -548,81 +563,83 @@ Partial Class MainPageForm
         '
         'revenueByPackageChart
         '
-        ChartArea1.Name = "ChartArea1"
-        Me.revenueByPackageChart.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.revenueByPackageChart.Legends.Add(Legend1)
+        ChartArea5.Name = "ChartArea1"
+        Me.revenueByPackageChart.ChartAreas.Add(ChartArea5)
+        Legend5.Name = "Legend1"
+        Me.revenueByPackageChart.Legends.Add(Legend5)
         Me.revenueByPackageChart.Location = New System.Drawing.Point(410, 266)
         Me.revenueByPackageChart.Name = "revenueByPackageChart"
         Me.revenueByPackageChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None
-        Series1.ChartArea = "ChartArea1"
-        Series1.Color = System.Drawing.Color.Orange
-        Series1.Legend = "Legend1"
-        Series1.Name = "All"
-        Me.revenueByPackageChart.Series.Add(Series1)
+        Series5.ChartArea = "ChartArea1"
+        Series5.Color = System.Drawing.Color.Orange
+        Series5.Legend = "Legend1"
+        Series5.Name = "All"
+        Me.revenueByPackageChart.Series.Add(Series5)
         Me.revenueByPackageChart.Size = New System.Drawing.Size(348, 191)
         Me.revenueByPackageChart.TabIndex = 3
         Me.revenueByPackageChart.Text = "Chart4"
         '
         'revenueByMonthChart
         '
-        ChartArea2.Name = "ChartArea1"
-        Me.revenueByMonthChart.ChartAreas.Add(ChartArea2)
-        Legend2.Name = "Legend1"
-        Me.revenueByMonthChart.Legends.Add(Legend2)
+        ChartArea6.Name = "ChartArea1"
+        Me.revenueByMonthChart.ChartAreas.Add(ChartArea6)
+        Legend6.Name = "Legend1"
+        Me.revenueByMonthChart.Legends.Add(Legend6)
         Me.revenueByMonthChart.Location = New System.Drawing.Point(13, 266)
         Me.revenueByMonthChart.Name = "revenueByMonthChart"
         Me.revenueByMonthChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None
-        Series2.ChartArea = "ChartArea1"
-        Series2.Color = System.Drawing.Color.Orange
-        Series2.Legend = "Legend1"
-        Series2.Name = "All"
-        Series2.YValuesPerPoint = 4
-        Me.revenueByMonthChart.Series.Add(Series2)
+        Series6.ChartArea = "ChartArea1"
+        Series6.Color = System.Drawing.Color.Orange
+        Series6.Legend = "Legend1"
+        Series6.Name = "All"
+        Series6.YValuesPerPoint = 4
+        Me.revenueByMonthChart.Series.Add(Series6)
         Me.revenueByMonthChart.Size = New System.Drawing.Size(348, 191)
         Me.revenueByMonthChart.TabIndex = 2
         Me.revenueByMonthChart.Text = "Chart3"
         '
         'packageBySubscriptionCountChart
         '
-        ChartArea3.Name = "ChartArea1"
-        Me.packageBySubscriptionCountChart.ChartAreas.Add(ChartArea3)
-        Legend3.Name = "Legend1"
-        Me.packageBySubscriptionCountChart.Legends.Add(Legend3)
+        ChartArea7.Name = "ChartArea1"
+        Me.packageBySubscriptionCountChart.ChartAreas.Add(ChartArea7)
+        Legend7.Name = "Legend1"
+        Me.packageBySubscriptionCountChart.Legends.Add(Legend7)
         Me.packageBySubscriptionCountChart.Location = New System.Drawing.Point(410, 24)
         Me.packageBySubscriptionCountChart.Name = "packageBySubscriptionCountChart"
         Me.packageBySubscriptionCountChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None
-        Series3.ChartArea = "ChartArea1"
-        Series3.Color = System.Drawing.Color.Orange
-        Series3.Legend = "Legend1"
-        Series3.Name = "All"
-        Me.packageBySubscriptionCountChart.Series.Add(Series3)
+        Series7.ChartArea = "ChartArea1"
+        Series7.Color = System.Drawing.Color.Orange
+        Series7.Legend = "Legend1"
+        Series7.Name = "All"
+        Me.packageBySubscriptionCountChart.Series.Add(Series7)
         Me.packageBySubscriptionCountChart.Size = New System.Drawing.Size(348, 191)
         Me.packageBySubscriptionCountChart.TabIndex = 1
         Me.packageBySubscriptionCountChart.Text = "Chart2"
         '
         'membershipByGenderChart
         '
-        ChartArea4.Name = "ChartArea1"
-        Me.membershipByGenderChart.ChartAreas.Add(ChartArea4)
-        Legend4.Name = "Legend1"
-        Me.membershipByGenderChart.Legends.Add(Legend4)
+        ChartArea8.Name = "ChartArea1"
+        Me.membershipByGenderChart.ChartAreas.Add(ChartArea8)
+        Legend8.Name = "Legend1"
+        Me.membershipByGenderChart.Legends.Add(Legend8)
         Me.membershipByGenderChart.Location = New System.Drawing.Point(13, 24)
         Me.membershipByGenderChart.Name = "membershipByGenderChart"
         Me.membershipByGenderChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None
-        Series4.ChartArea = "ChartArea1"
-        Series4.Color = System.Drawing.Color.Orange
-        Series4.Legend = "Legend1"
-        Series4.Name = "All"
-        Me.membershipByGenderChart.Series.Add(Series4)
+        Series8.ChartArea = "ChartArea1"
+        Series8.Color = System.Drawing.Color.Orange
+        Series8.Legend = "Legend1"
+        Series8.Name = "All"
+        Me.membershipByGenderChart.Series.Add(Series8)
         Me.membershipByGenderChart.Size = New System.Drawing.Size(348, 191)
         Me.membershipByGenderChart.TabIndex = 0
         Me.membershipByGenderChart.Text = "Chart1"
         '
         'settingTabPage
         '
+        Me.settingTabPage.AutoScroll = True
         Me.settingTabPage.Controls.Add(Me.GroupBox4)
         Me.settingTabPage.Controls.Add(Me.GroupBox3)
+        Me.settingTabPage.Controls.Add(Me.GroupBox1)
         Me.settingTabPage.Location = New System.Drawing.Point(4, 29)
         Me.settingTabPage.Name = "settingTabPage"
         Me.settingTabPage.Size = New System.Drawing.Size(799, 485)
@@ -632,18 +649,20 @@ Partial Class MainPageForm
         '
         'GroupBox4
         '
+        Me.GroupBox4.ForeColor = System.Drawing.Color.Orange
         Me.GroupBox4.Location = New System.Drawing.Point(388, 21)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(408, 400)
+        Me.GroupBox4.Size = New System.Drawing.Size(399, 139)
         Me.GroupBox4.TabIndex = 3
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Contact Developer"
         '
         'GroupBox3
         '
+        Me.GroupBox3.ForeColor = System.Drawing.Color.Orange
         Me.GroupBox3.Location = New System.Drawing.Point(16, 21)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(363, 400)
+        Me.GroupBox3.Size = New System.Drawing.Size(363, 139)
         Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "About"
@@ -695,6 +714,91 @@ Partial Class MainPageForm
         Me.PackageBindingSource.DataMember = "package"
         Me.PackageBindingSource.DataSource = Me.PowerZoneGymDatabaseDataSet
         '
+        'Admin_userBindingSource
+        '
+        Me.Admin_userBindingSource.DataMember = "admin_user"
+        Me.Admin_userBindingSource.DataSource = Me.PowerZoneGymDatabaseDataSet
+        '
+        'Admin_userTableAdapter
+        '
+        Me.Admin_userTableAdapter.ClearBeforeFill = True
+        '
+        'adminUserDataGridView
+        '
+        Me.adminUserDataGridView.AutoGenerateColumns = False
+        Me.adminUserDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.adminUserDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewCheckBoxColumn1, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
+        Me.adminUserDataGridView.DataSource = Me.Admin_userBindingSource
+        Me.adminUserDataGridView.Location = New System.Drawing.Point(6, 26)
+        Me.adminUserDataGridView.Name = "adminUserDataGridView"
+        Me.adminUserDataGridView.RowTemplate.Height = 24
+        Me.adminUserDataGridView.Size = New System.Drawing.Size(759, 236)
+        Me.adminUserDataGridView.TabIndex = 3
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "ID"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "ID"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "email"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "email"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "username"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "username"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "created_on"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "created_on"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'DataGridViewCheckBoxColumn1
+        '
+        Me.DataGridViewCheckBoxColumn1.DataPropertyName = "is_active"
+        Me.DataGridViewCheckBoxColumn1.HeaderText = "is_active"
+        Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "last_login"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "last_login"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "password"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "password"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        '
+        'saveAdminUserChangesBtn
+        '
+        Me.saveAdminUserChangesBtn.BackColor = System.Drawing.Color.Orange
+        Me.saveAdminUserChangesBtn.ForeColor = System.Drawing.Color.White
+        Me.saveAdminUserChangesBtn.Location = New System.Drawing.Point(535, 268)
+        Me.saveAdminUserChangesBtn.Name = "saveAdminUserChangesBtn"
+        Me.saveAdminUserChangesBtn.Size = New System.Drawing.Size(230, 29)
+        Me.saveAdminUserChangesBtn.TabIndex = 4
+        Me.saveAdminUserChangesBtn.Text = "Save Admin Users Changes"
+        Me.saveAdminUserChangesBtn.UseVisualStyleBackColor = False
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.saveAdminUserChangesBtn)
+        Me.GroupBox1.Controls.Add(Me.adminUserDataGridView)
+        Me.GroupBox1.Location = New System.Drawing.Point(16, 167)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(771, 303)
+        Me.GroupBox1.TabIndex = 6
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Manage Admin Users"
+        '
         'MainPageForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -735,6 +839,9 @@ Partial Class MainPageForm
         CType(Me.MemberBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SubscriptionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PackageBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Admin_userBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.adminUserDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -792,4 +899,16 @@ Partial Class MainPageForm
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents Admin_userBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Admin_userTableAdapter As WindowsApplication1.PowerZoneGymDatabaseDataSetTableAdapters.admin_userTableAdapter
+    Friend WithEvents adminUserDataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewCheckBoxColumn1 As System.Windows.Forms.DataGridViewCheckBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents saveAdminUserChangesBtn As System.Windows.Forms.Button
 End Class

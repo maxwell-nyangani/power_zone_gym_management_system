@@ -71,6 +71,8 @@ Public Class MainPageForm
     End Sub
 
     Private Sub MainPageForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'PowerZoneGymDatabaseDataSet.admin_user' table. You can move, or remove it, as needed.
+        Me.Admin_userTableAdapter.Fill(Me.PowerZoneGymDatabaseDataSet.admin_user)
         Me.CenterToScreen()
         Me.bindMembersData()
         Me.bindSubscriptionsData()
