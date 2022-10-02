@@ -18,7 +18,7 @@ Represents the strongly named DataTable class.
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:WindowsApplication1.PowerZoneGymDatabaseDataSet.userDataTable">
+</member><member name="T:WindowsApplication1.PowerZoneGymDatabaseDataSet.admin_userDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
@@ -34,7 +34,7 @@ Represents strongly named DataRow class.
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:WindowsApplication1.PowerZoneGymDatabaseDataSet.userRow">
+</member><member name="T:WindowsApplication1.PowerZoneGymDatabaseDataSet.admin_userRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
@@ -50,7 +50,7 @@ Row event argument class
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:WindowsApplication1.PowerZoneGymDatabaseDataSet.userRowChangeEvent">
+</member><member name="T:WindowsApplication1.PowerZoneGymDatabaseDataSet.admin_userRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
@@ -70,7 +70,7 @@ Represents the connection and commands used to retrieve and save data.
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:WindowsApplication1.PowerZoneGymDatabaseDataSetTableAdapters.userTableAdapter">
+</member><member name="T:WindowsApplication1.PowerZoneGymDatabaseDataSetTableAdapters.admin_userTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

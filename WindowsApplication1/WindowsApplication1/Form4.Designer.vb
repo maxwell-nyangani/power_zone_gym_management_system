@@ -177,6 +177,7 @@ Partial Class AddPackageForm
         '
         'targetSexCBx
         '
+        Me.targetSexCBx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.targetSexCBx.FormattingEnabled = True
         Me.targetSexCBx.Items.AddRange(New Object() {"Male", "Female", "Unisex"})
         Me.targetSexCBx.Location = New System.Drawing.Point(223, 297)

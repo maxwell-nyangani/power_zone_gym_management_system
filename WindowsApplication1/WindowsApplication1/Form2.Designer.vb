@@ -24,26 +24,18 @@ Partial Class MainPageForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainPageForm))
-        Dim ChartArea5 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend5 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series13 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series14 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series15 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea6 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend6 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series16 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series17 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series18 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea7 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend7 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series19 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series20 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series21 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea8 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend8 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series22 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series23 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series24 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.homeTabPage = New System.Windows.Forms.TabPage()
@@ -78,16 +70,17 @@ Partial Class MainPageForm
         Me.subscriptionSearchTxtBx = New System.Windows.Forms.TextBox()
         Me.subscriptionsDtGrdVw = New System.Windows.Forms.DataGridView()
         Me.dashboardTabPage = New System.Windows.Forms.TabPage()
-        Me.Chart4 = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.Chart3 = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.Chart2 = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.revenueByPackageChart = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.revenueByMonthChart = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.packageBySubscriptionCountChart = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.membershipByGenderChart = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.settingTabPage = New System.Windows.Forms.TabPage()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.PowerZoneGymDatabaseDataSet = New WindowsApplication1.PowerZoneGymDatabaseDataSet()
         Me.MemberBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -111,12 +104,11 @@ Partial Class MainPageForm
         Me.subscriptionsTabPage.SuspendLayout()
         CType(Me.subscriptionsDtGrdVw, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.dashboardTabPage.SuspendLayout()
-        CType(Me.Chart4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Chart3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Chart2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.revenueByPackageChart, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.revenueByMonthChart, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.packageBySubscriptionCountChart, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.membershipByGenderChart, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.settingTabPage.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
         CType(Me.PowerZoneGymDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MemberBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SubscriptionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -499,10 +491,14 @@ Partial Class MainPageForm
         '
         'dashboardTabPage
         '
-        Me.dashboardTabPage.Controls.Add(Me.Chart4)
-        Me.dashboardTabPage.Controls.Add(Me.Chart3)
-        Me.dashboardTabPage.Controls.Add(Me.Chart2)
-        Me.dashboardTabPage.Controls.Add(Me.Chart1)
+        Me.dashboardTabPage.Controls.Add(Me.Label12)
+        Me.dashboardTabPage.Controls.Add(Me.Label11)
+        Me.dashboardTabPage.Controls.Add(Me.Label10)
+        Me.dashboardTabPage.Controls.Add(Me.Label9)
+        Me.dashboardTabPage.Controls.Add(Me.revenueByPackageChart)
+        Me.dashboardTabPage.Controls.Add(Me.revenueByMonthChart)
+        Me.dashboardTabPage.Controls.Add(Me.packageBySubscriptionCountChart)
+        Me.dashboardTabPage.Controls.Add(Me.membershipByGenderChart)
         Me.dashboardTabPage.Location = New System.Drawing.Point(4, 29)
         Me.dashboardTabPage.Name = "dashboardTabPage"
         Me.dashboardTabPage.Size = New System.Drawing.Size(799, 485)
@@ -510,124 +506,123 @@ Partial Class MainPageForm
         Me.dashboardTabPage.Text = "Dashboard"
         Me.dashboardTabPage.UseVisualStyleBackColor = True
         '
-        'Chart4
+        'Label12
         '
-        ChartArea5.Name = "ChartArea1"
-        Me.Chart4.ChartAreas.Add(ChartArea5)
-        Legend5.Name = "Legend1"
-        Me.Chart4.Legends.Add(Legend5)
-        Me.Chart4.Location = New System.Drawing.Point(410, 266)
-        Me.Chart4.Name = "Chart4"
-        Me.Chart4.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire
-        Series13.ChartArea = "ChartArea1"
-        Series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline
-        Series13.Legend = "Legend1"
-        Series13.Name = "Series1"
-        Series14.ChartArea = "ChartArea1"
-        Series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point
-        Series14.Legend = "Legend1"
-        Series14.Name = "Series2"
-        Series15.ChartArea = "ChartArea1"
-        Series15.Legend = "Legend1"
-        Series15.Name = "Series3"
-        Series15.YValuesPerPoint = 4
-        Me.Chart4.Series.Add(Series13)
-        Me.Chart4.Series.Add(Series14)
-        Me.Chart4.Series.Add(Series15)
-        Me.Chart4.Size = New System.Drawing.Size(348, 191)
-        Me.Chart4.TabIndex = 3
-        Me.Chart4.Text = "Chart4"
+        Me.Label12.AutoSize = True
+        Me.Label12.ForeColor = System.Drawing.Color.Orange
+        Me.Label12.Location = New System.Drawing.Point(442, 243)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(246, 20)
+        Me.Label12.TabIndex = 7
+        Me.Label12.Text = "This Month's Revenue By Package"
         '
-        'Chart3
+        'Label11
         '
-        ChartArea6.Name = "ChartArea1"
-        Me.Chart3.ChartAreas.Add(ChartArea6)
-        Legend6.Name = "Legend1"
-        Me.Chart3.Legends.Add(Legend6)
-        Me.Chart3.Location = New System.Drawing.Point(13, 266)
-        Me.Chart3.Name = "Chart3"
-        Me.Chart3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire
-        Series16.ChartArea = "ChartArea1"
-        Series16.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline
-        Series16.Legend = "Legend1"
-        Series16.Name = "Series1"
-        Series17.ChartArea = "ChartArea1"
-        Series17.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point
-        Series17.Legend = "Legend1"
-        Series17.Name = "Series2"
-        Series18.ChartArea = "ChartArea1"
-        Series18.Legend = "Legend1"
-        Series18.Name = "Series3"
-        Series18.YValuesPerPoint = 4
-        Me.Chart3.Series.Add(Series16)
-        Me.Chart3.Series.Add(Series17)
-        Me.Chart3.Series.Add(Series18)
-        Me.Chart3.Size = New System.Drawing.Size(348, 191)
-        Me.Chart3.TabIndex = 2
-        Me.Chart3.Text = "Chart3"
+        Me.Label11.AutoSize = True
+        Me.Label11.ForeColor = System.Drawing.Color.Orange
+        Me.Label11.Location = New System.Drawing.Point(81, 243)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(141, 20)
+        Me.Label11.TabIndex = 6
+        Me.Label11.Text = "Revenue by Month"
         '
-        'Chart2
+        'Label10
         '
-        ChartArea7.Name = "ChartArea1"
-        Me.Chart2.ChartAreas.Add(ChartArea7)
-        Legend7.Name = "Legend1"
-        Me.Chart2.Legends.Add(Legend7)
-        Me.Chart2.Location = New System.Drawing.Point(410, 24)
-        Me.Chart2.Name = "Chart2"
-        Me.Chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire
-        Series19.ChartArea = "ChartArea1"
-        Series19.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline
-        Series19.Legend = "Legend1"
-        Series19.Name = "Series1"
-        Series20.ChartArea = "ChartArea1"
-        Series20.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point
-        Series20.Legend = "Legend1"
-        Series20.Name = "Series2"
-        Series21.ChartArea = "ChartArea1"
-        Series21.Legend = "Legend1"
-        Series21.Name = "Series3"
-        Series21.YValuesPerPoint = 4
-        Me.Chart2.Series.Add(Series19)
-        Me.Chart2.Series.Add(Series20)
-        Me.Chart2.Series.Add(Series21)
-        Me.Chart2.Size = New System.Drawing.Size(348, 191)
-        Me.Chart2.TabIndex = 1
-        Me.Chart2.Text = "Chart2"
+        Me.Label10.AutoSize = True
+        Me.Label10.ForeColor = System.Drawing.Color.Orange
+        Me.Label10.Location = New System.Drawing.Point(455, 12)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(225, 20)
+        Me.Label10.TabIndex = 5
+        Me.Label10.Text = "Subscription Count By Package"
         '
-        'Chart1
+        'Label9
         '
-        ChartArea8.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea8)
-        Legend8.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend8)
-        Me.Chart1.Location = New System.Drawing.Point(13, 24)
-        Me.Chart1.Name = "Chart1"
-        Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire
-        Series22.ChartArea = "ChartArea1"
-        Series22.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline
-        Series22.Legend = "Legend1"
-        Series22.Name = "Series1"
-        Series23.ChartArea = "ChartArea1"
-        Series23.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point
-        Series23.Legend = "Legend1"
-        Series23.Name = "Series2"
-        Series24.ChartArea = "ChartArea1"
-        Series24.Legend = "Legend1"
-        Series24.Name = "Series3"
-        Series24.YValuesPerPoint = 4
-        Me.Chart1.Series.Add(Series22)
-        Me.Chart1.Series.Add(Series23)
-        Me.Chart1.Series.Add(Series24)
-        Me.Chart1.Size = New System.Drawing.Size(348, 191)
-        Me.Chart1.TabIndex = 0
-        Me.Chart1.Text = "Chart1"
+        Me.Label9.AutoSize = True
+        Me.Label9.ForeColor = System.Drawing.Color.Orange
+        Me.Label9.Location = New System.Drawing.Point(81, 12)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(164, 20)
+        Me.Label9.TabIndex = 4
+        Me.Label9.Text = "Member Count By Sex"
+        '
+        'revenueByPackageChart
+        '
+        ChartArea1.Name = "ChartArea1"
+        Me.revenueByPackageChart.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.revenueByPackageChart.Legends.Add(Legend1)
+        Me.revenueByPackageChart.Location = New System.Drawing.Point(410, 266)
+        Me.revenueByPackageChart.Name = "revenueByPackageChart"
+        Me.revenueByPackageChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None
+        Series1.ChartArea = "ChartArea1"
+        Series1.Color = System.Drawing.Color.Orange
+        Series1.Legend = "Legend1"
+        Series1.Name = "All"
+        Me.revenueByPackageChart.Series.Add(Series1)
+        Me.revenueByPackageChart.Size = New System.Drawing.Size(348, 191)
+        Me.revenueByPackageChart.TabIndex = 3
+        Me.revenueByPackageChart.Text = "Chart4"
+        '
+        'revenueByMonthChart
+        '
+        ChartArea2.Name = "ChartArea1"
+        Me.revenueByMonthChart.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        Me.revenueByMonthChart.Legends.Add(Legend2)
+        Me.revenueByMonthChart.Location = New System.Drawing.Point(13, 266)
+        Me.revenueByMonthChart.Name = "revenueByMonthChart"
+        Me.revenueByMonthChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None
+        Series2.ChartArea = "ChartArea1"
+        Series2.Color = System.Drawing.Color.Orange
+        Series2.Legend = "Legend1"
+        Series2.Name = "All"
+        Series2.YValuesPerPoint = 4
+        Me.revenueByMonthChart.Series.Add(Series2)
+        Me.revenueByMonthChart.Size = New System.Drawing.Size(348, 191)
+        Me.revenueByMonthChart.TabIndex = 2
+        Me.revenueByMonthChart.Text = "Chart3"
+        '
+        'packageBySubscriptionCountChart
+        '
+        ChartArea3.Name = "ChartArea1"
+        Me.packageBySubscriptionCountChart.ChartAreas.Add(ChartArea3)
+        Legend3.Name = "Legend1"
+        Me.packageBySubscriptionCountChart.Legends.Add(Legend3)
+        Me.packageBySubscriptionCountChart.Location = New System.Drawing.Point(410, 24)
+        Me.packageBySubscriptionCountChart.Name = "packageBySubscriptionCountChart"
+        Me.packageBySubscriptionCountChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None
+        Series3.ChartArea = "ChartArea1"
+        Series3.Color = System.Drawing.Color.Orange
+        Series3.Legend = "Legend1"
+        Series3.Name = "All"
+        Me.packageBySubscriptionCountChart.Series.Add(Series3)
+        Me.packageBySubscriptionCountChart.Size = New System.Drawing.Size(348, 191)
+        Me.packageBySubscriptionCountChart.TabIndex = 1
+        Me.packageBySubscriptionCountChart.Text = "Chart2"
+        '
+        'membershipByGenderChart
+        '
+        ChartArea4.Name = "ChartArea1"
+        Me.membershipByGenderChart.ChartAreas.Add(ChartArea4)
+        Legend4.Name = "Legend1"
+        Me.membershipByGenderChart.Legends.Add(Legend4)
+        Me.membershipByGenderChart.Location = New System.Drawing.Point(13, 24)
+        Me.membershipByGenderChart.Name = "membershipByGenderChart"
+        Me.membershipByGenderChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None
+        Series4.ChartArea = "ChartArea1"
+        Series4.Color = System.Drawing.Color.Orange
+        Series4.Legend = "Legend1"
+        Series4.Name = "All"
+        Me.membershipByGenderChart.Series.Add(Series4)
+        Me.membershipByGenderChart.Size = New System.Drawing.Size(348, 191)
+        Me.membershipByGenderChart.TabIndex = 0
+        Me.membershipByGenderChart.Text = "Chart1"
         '
         'settingTabPage
         '
         Me.settingTabPage.Controls.Add(Me.GroupBox4)
         Me.settingTabPage.Controls.Add(Me.GroupBox3)
-        Me.settingTabPage.Controls.Add(Me.GroupBox2)
-        Me.settingTabPage.Controls.Add(Me.GroupBox1)
         Me.settingTabPage.Location = New System.Drawing.Point(4, 29)
         Me.settingTabPage.Name = "settingTabPage"
         Me.settingTabPage.Size = New System.Drawing.Size(799, 485)
@@ -637,47 +632,21 @@ Partial Class MainPageForm
         '
         'GroupBox4
         '
-        Me.GroupBox4.Location = New System.Drawing.Point(388, 242)
+        Me.GroupBox4.Location = New System.Drawing.Point(388, 21)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(363, 179)
+        Me.GroupBox4.Size = New System.Drawing.Size(408, 400)
         Me.GroupBox4.TabIndex = 3
         Me.GroupBox4.TabStop = False
-        Me.GroupBox4.Text = "GroupBox4"
+        Me.GroupBox4.Text = "Contact Developer"
         '
         'GroupBox3
         '
-        Me.GroupBox3.Location = New System.Drawing.Point(16, 242)
+        Me.GroupBox3.Location = New System.Drawing.Point(16, 21)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(363, 179)
+        Me.GroupBox3.Size = New System.Drawing.Size(363, 400)
         Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "GroupBox3"
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Location = New System.Drawing.Point(388, 33)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(363, 179)
-        Me.GroupBox2.TabIndex = 1
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "GroupBox2"
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
-        Me.GroupBox1.Location = New System.Drawing.Point(16, 33)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(345, 179)
-        Me.GroupBox1.TabIndex = 0
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "GroupBox1"
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(66, 26)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(258, 27)
-        Me.DateTimePicker1.TabIndex = 0
+        Me.GroupBox3.Text = "About"
         '
         'ContextMenuStrip1
         '
@@ -701,12 +670,12 @@ Partial Class MainPageForm
         '
         'TableAdapterManager
         '
+        Me.TableAdapterManager.admin_userTableAdapter = Nothing
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.memberTableAdapter = Me.MemberTableAdapter
         Me.TableAdapterManager.packageTableAdapter = Me.PackageTableAdapter
         Me.TableAdapterManager.subscriptionTableAdapter = Me.SubscriptionTableAdapter
         Me.TableAdapterManager.UpdateOrder = WindowsApplication1.PowerZoneGymDatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.userTableAdapter = Nothing
         '
         'PackageTableAdapter
         '
@@ -756,12 +725,12 @@ Partial Class MainPageForm
         Me.subscriptionsTabPage.PerformLayout()
         CType(Me.subscriptionsDtGrdVw, System.ComponentModel.ISupportInitialize).EndInit()
         Me.dashboardTabPage.ResumeLayout(False)
-        CType(Me.Chart4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Chart3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Chart2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.dashboardTabPage.PerformLayout()
+        CType(Me.revenueByPackageChart, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.revenueByMonthChart, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.packageBySubscriptionCountChart, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.membershipByGenderChart, System.ComponentModel.ISupportInitialize).EndInit()
         Me.settingTabPage.ResumeLayout(False)
-        Me.GroupBox1.ResumeLayout(False)
         CType(Me.PowerZoneGymDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MemberBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SubscriptionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -797,12 +766,9 @@ Partial Class MainPageForm
     Friend WithEvents SubscriptionBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents PackageTableAdapter As WindowsApplication1.PowerZoneGymDatabaseDataSetTableAdapters.packageTableAdapter
     Friend WithEvents PackageBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents Chart1 As System.Windows.Forms.DataVisualization.Charting.Chart
+    Friend WithEvents membershipByGenderChart As System.Windows.Forms.DataVisualization.Charting.Chart
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents deleteSelectedMemberBtn As System.Windows.Forms.Button
     Friend WithEvents searchMembersBtn As System.Windows.Forms.Button
     Friend WithEvents membersSearchTxtBx As System.Windows.Forms.TextBox
@@ -819,7 +785,11 @@ Partial Class MainPageForm
     Friend WithEvents addNewSubscriptionBtn As System.Windows.Forms.Button
     Friend WithEvents searchSubscriptionBtn As System.Windows.Forms.Button
     Friend WithEvents subscriptionSearchTxtBx As System.Windows.Forms.TextBox
-    Friend WithEvents Chart4 As System.Windows.Forms.DataVisualization.Charting.Chart
-    Friend WithEvents Chart3 As System.Windows.Forms.DataVisualization.Charting.Chart
-    Friend WithEvents Chart2 As System.Windows.Forms.DataVisualization.Charting.Chart
+    Friend WithEvents revenueByPackageChart As System.Windows.Forms.DataVisualization.Charting.Chart
+    Friend WithEvents revenueByMonthChart As System.Windows.Forms.DataVisualization.Charting.Chart
+    Friend WithEvents packageBySubscriptionCountChart As System.Windows.Forms.DataVisualization.Charting.Chart
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
 End Class

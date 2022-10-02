@@ -132,6 +132,7 @@ Partial Class AddNewMemberForm
         '
         'titleCBx
         '
+        Me.titleCBx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.titleCBx.FormattingEnabled = True
         Me.titleCBx.Items.AddRange(New Object() {"Dr", "Prof", "Hon", "Mr", "Mrs", "Miss", "Ms", "Your Excellency", "Sir", "Dame", "Duke", "Duchess"})
         Me.titleCBx.Location = New System.Drawing.Point(151, 160)
@@ -155,6 +156,7 @@ Partial Class AddNewMemberForm
         '
         'sexCBx
         '
+        Me.sexCBx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.sexCBx.FormattingEnabled = True
         Me.sexCBx.Items.AddRange(New Object() {"Male", "Female", "Prefer not to say"})
         Me.sexCBx.Location = New System.Drawing.Point(151, 269)

@@ -287,4 +287,118 @@ Public Class MainPageForm
         Me.subscriptionsDataAdaptor.Fill(subscriptionsDataTable)
         Me.subscriptionsDtGrdVw.DataSource = subscriptionsDataTable
     End Sub
+
+    Private Sub dashboardTabPage_Enter(sender As Object, e As EventArgs) Handles dashboardTabPage.Enter
+        'executed when the visitor visits the dashboard page
+        Dim membersByGenderDataAdaptor As New OleDbDataAdapter
+        Dim membersByGenderDataTable As New DataTable
+        Dim membersByGenderCommand As New OleDbCommand("SELECT sex AS gender, COUNT(ID) AS my_count FROM member GROUP BY  sex", connection)
+        'membersByGenderCommand.Parameters.AddWithValue("@searchTerm", Me.subscriptionSearchTxtBx.Text)
+        membersByGenderDataAdaptor.SelectCommand = membersByGenderCommand
+        membersByGenderDataTable.Clear()
+        membersByGenderDataAdaptor.Fill(membersByGenderDataTable)
+
+        'load data into chart
+        Me.membershipByGenderChart.Series("All").Points.Clear()
+        For Each row As DataRow In membersByGenderDataTable.Rows
+            Me.membershipByGenderChart.Series("All").Points.AddXY(row.Item("gender"), row.Item("my_count"))
+        Next row
+
+
+        Dim packageBySubscriptionCountDataAdaptor As New OleDbDataAdapter
+        Dim packageBySubscriptionCountDataTable As New DataTable
+        Dim packageBySubscriptionCountCommand As New OleDbCommand("SELECT p.title AS my_title, COUNT(s.ID) AS my_count FROM package p, subscription s WHERE s.package_id = p.id  GROUP BY  p.title", connection)
+        'packageBySubscriptionCountCommand.Parameters.AddWithValue("@searchTerm", Me.subscriptionSearchTxtBx.Text)
+        packageBySubscriptionCountDataAdaptor.SelectCommand = packageBySubscriptionCountCommand
+        packageBySubscriptionCountDataTable.Clear()
+        packageBySubscriptionCountDataAdaptor.Fill(packageBySubscriptionCountDataTable)
+
+        Me.packageBySubscriptionCountChart.Series("All").Points.Clear()
+
+        For Each row As DataRow In packageBySubscriptionCountDataTable.Rows
+            Me.packageBySubscriptionCountChart.Series("All").Points.AddXY(row.Item("my_title"), row.Item("my_count"))
+        Next row
+
+
+
+
+
+        Dim revenueByMonthDataAdaptor00 As New OleDbDataAdapter
+        Dim revenueByMonthDataTable00 As New DataTable
+        Dim revenueByMonthCommand00 As New OleDbCommand("SELECT FORMAT(DateAdd(""m"", -3, Date()), 'yyyy_MM') AS my_month, SUM(p.price) AS my_sum FROM package p, subscription s WHERE s.package_id = p.id AND s.end_date > DateAdd(""m"", -3, Date()) AND s.start_date <= DateAdd(""m"",-4,Date()) GROUP BY FORMAT(DateAdd(""m"", -3, Date()), 'yyyy_MM')", connection)
+        'revenueByMonthCommand.Parameters.AddWithValue("@searchTerm", Me.subscriptionSearchTxtBx.Text)
+        revenueByMonthDataAdaptor00.SelectCommand = revenueByMonthCommand00
+        revenueByMonthDataTable00.Clear()
+        revenueByMonthDataAdaptor00.Fill(revenueByMonthDataTable00)
+
+        Me.revenueByMonthChart.Series("All").Points.Clear()
+
+        For Each row As DataRow In revenueByMonthDataTable00.Rows
+            Me.revenueByMonthChart.Series("All").Points.AddXY(row.Item("my_month"), row.Item("my_sum"))
+        Next row
+
+
+        Dim revenueByMonthDataAdaptor0 As New OleDbDataAdapter
+        Dim revenueByMonthDataTable0 As New DataTable
+        Dim revenueByMonthCommand0 As New OleDbCommand("SELECT FORMAT(DateAdd(""m"", -2, Date()), 'yyyy_MM') AS my_month, SUM(p.price) AS my_sum FROM package p, subscription s WHERE s.package_id = p.id AND s.end_date > DateAdd(""m"", -2, Date()) AND s.start_date <= DateAdd(""m"",-3,Date()) GROUP BY FORMAT(DateAdd(""m"", -2, Date()), 'yyyy_MM')", connection)
+        'revenueByMonthCommand.Parameters.AddWithValue("@searchTerm", Me.subscriptionSearchTxtBx.Text)
+        revenueByMonthDataAdaptor0.SelectCommand = revenueByMonthCommand0
+        revenueByMonthDataTable0.Clear()
+        revenueByMonthDataAdaptor0.Fill(revenueByMonthDataTable0)
+
+        'Me.revenueByMonthChart.Series("All").Points.Clear()
+
+        For Each row As DataRow In revenueByMonthDataTable0.Rows
+            Me.revenueByMonthChart.Series("All").Points.AddXY(row.Item("my_month"), row.Item("my_sum"))
+        Next row
+
+        Dim revenueByMonthDataAdaptor1 As New OleDbDataAdapter
+        Dim revenueByMonthDataTable1 As New DataTable
+        Dim revenueByMonthCommand1 As New OleDbCommand("SELECT FORMAT(DateAdd(""m"", -1, Date()), 'yyyy_MM') AS my_month, SUM(p.price) AS my_sum FROM package p, subscription s WHERE s.package_id = p.id AND s.end_date > DateAdd(""m"", -1, Date()) AND s.start_date <= DateAdd(""m"",-2,Date()) GROUP BY FORMAT(DateAdd(""m"", -1, Date()), 'yyyy_MM')", connection)
+        'revenueByMonthCommand.Parameters.AddWithValue("@searchTerm", Me.subscriptionSearchTxtBx.Text)
+        revenueByMonthDataAdaptor1.SelectCommand = revenueByMonthCommand1
+        revenueByMonthDataTable1.Clear()
+        revenueByMonthDataAdaptor1.Fill(revenueByMonthDataTable1)
+
+        'Me.revenueByMonthChart.Series("All").Points.Clear()
+
+        For Each row As DataRow In revenueByMonthDataTable1.Rows
+            Me.revenueByMonthChart.Series("All").Points.AddXY(row.Item("my_month"), row.Item("my_sum"))
+        Next row
+
+
+        Dim revenueByMonthDataAdaptor As New OleDbDataAdapter
+        Dim revenueByMonthDataTable As New DataTable
+        Dim revenueByMonthCommand As New OleDbCommand("SELECT FORMAT(Date(), 'yyyy_MM') AS my_month, SUM(p.price) AS my_sum FROM package p, subscription s WHERE s.package_id = p.id AND s.end_date > Date() AND s.start_date <= Date() GROUP BY FORMAT(Date(), 'yyyy_MM')", connection)
+        'revenueByMonthCommand.Parameters.AddWithValue("@searchTerm", Me.subscriptionSearchTxtBx.Text)
+        revenueByMonthDataAdaptor.SelectCommand = revenueByMonthCommand
+        revenueByMonthDataTable.Clear()
+        revenueByMonthDataAdaptor.Fill(revenueByMonthDataTable)
+
+        'Me.revenueByMonthChart.Series("All").Points.Clear()
+
+        For Each row As DataRow In revenueByMonthDataTable.Rows
+            Me.revenueByMonthChart.Series("All").Points.AddXY(row.Item("my_month"), row.Item("my_sum"))
+        Next row
+
+
+        Dim revenueByPackageDataAdaptor As New OleDbDataAdapter
+        Dim revenueByPackageDataTable As New DataTable
+        Dim revenueByPackageCommand As New OleDbCommand("SELECT p.title AS my_title, SUM(p.price) AS my_sum FROM package p, subscription s WHERE s.package_id = p.id AND s.end_date > Date() AND s.start_date <= Date() GROUP BY p.title", connection)
+        'revenueByPackageCommand.Parameters.AddWithValue("@searchTerm", Me.subscriptionSearchTxtBx.Text)
+        revenueByPackageDataAdaptor.SelectCommand = revenueByPackageCommand
+        revenueByPackageDataTable.Clear()
+        revenueByPackageDataAdaptor.Fill(revenueByPackageDataTable)
+
+        Me.revenueByPackageChart.Series("All").Points.Clear()
+
+        For Each row As DataRow In revenueByPackageDataTable.Rows
+            Me.revenueByPackageChart.Series("All").Points.AddXY(row.Item("my_title"), row.Item("my_sum"))
+        Next row
+
+
+
+    End Sub
+
+
 End Class

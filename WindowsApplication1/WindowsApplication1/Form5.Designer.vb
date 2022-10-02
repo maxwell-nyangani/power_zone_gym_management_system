@@ -133,6 +133,7 @@ Partial Class AddSubscriptionForm
         '
         'membersCBx
         '
+        Me.membersCBx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.membersCBx.FormattingEnabled = True
         Me.membersCBx.Location = New System.Drawing.Point(256, 214)
         Me.membersCBx.Name = "membersCBx"
@@ -141,6 +142,7 @@ Partial Class AddSubscriptionForm
         '
         'packagesCBx
         '
+        Me.packagesCBx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.packagesCBx.FormattingEnabled = True
         Me.packagesCBx.Location = New System.Drawing.Point(256, 258)
         Me.packagesCBx.Name = "packagesCBx"

@@ -103,7 +103,7 @@ Public Class AddSubscriptionForm
             Me.Close()
         Else
             'update the old record in DB
-            Dim updateQueryString As String = "UPDATE subscription SET member_id='" & Me.membersCBx.SelectedValue & "', package_id='" & Me.packagesCBx.SelectedValue & "', start_date='" & Me.startDateDtTmPckr.Text & "', end_date='" & Me.endDateDtTmPckr.Text & "', is_active=" & Me.isActiveChkBx.Checked & ""
+            Dim updateQueryString As String = "UPDATE subscription SET member_id='" & Me.membersCBx.SelectedValue & "', package_id='" & Me.packagesCBx.SelectedValue & "', start_date='" & Me.startDateDtTmPckr.Text & "', end_date='" & Me.endDateDtTmPckr.Text & "', is_active=" & Me.isActiveChkBx.Checked & " WHERE id=" & Me.idOfRecordToEdit & ""
             'MessageBox.Show(updateQueryString)
             Dim updateCommand As New OleDbCommand(updateQueryString, dbConnection)
             Me.dbConnection.Open()
