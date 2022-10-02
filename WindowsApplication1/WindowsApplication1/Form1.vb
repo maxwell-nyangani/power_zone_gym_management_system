@@ -1,7 +1,9 @@
 ﻿Imports System.Data.OleDb
 Public Class LoginForm
     'DB connection variables
-    Dim dbConnection As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\PowerZoneGymDatabase.accdb")
+    Dim dbConnectionString As String = My.Settings.PowerZoneGymDatabaseConnectionString
+
+    Dim dbConnection As New OleDbConnection(dbConnectionString)
 
     Private Function checkUserCredentials(username As String, password As String)
         Dim fetchUserCommand As New OleDbCommand
@@ -49,7 +51,6 @@ Public Class LoginForm
 
     Private Sub loginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CenterToScreen()
-        'connect to the database
     End Sub
 
 End Class

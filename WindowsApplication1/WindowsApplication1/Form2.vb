@@ -1,7 +1,8 @@
 ﻿Imports System.Data.OleDb
 Public Class MainPageForm
     'DB connection variables
-    Dim connection As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\PowerZoneGymDatabase.accdb")
+    Dim dbConnectionString As String = My.Settings.PowerZoneGymDatabaseConnectionString
+    Dim connection As New OleDbConnection(dbConnectionString)
 
     Private motherForm As LoginForm
 
